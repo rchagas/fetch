@@ -1,0 +1,84 @@
+html{
+    background: white;
+}
+body{
+    width: 90%;
+    min-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#navbar{
+    padding: 15px 40px 15px 40px;
+    background: black;
+    border-radius: 25px 25px 0px 0px;
+}
+#navbar a{
+    font-family: Arial;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px 20px 16px 20px;
+}
+#navbar .active{
+    opacity: 0.5;
+}
+
+.container{
+    margin: 0 auto;
+    min-height: 480px;
+    border-radius: 0px 0px 25px 25px;
+    border: 2px solid;
+    border-color: black;
+    display: none;
+}
+div.active{
+    background: black;    
+    display: block;
+}
+
+.flow {
+  transform-origin: 50% 0%;
+}
+
+.flow > pre {
+  font-family: "Arial", sans-serif;
+  color: #ffd61d;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.1em;
+}
+
+.reading-animation {
+  animation: reading 50s linear 0s infinite forwards;
+}
+
+@keyframes reading {
+  from {
+    transform: translate3d(0, 0px, -200px);
+  }
+  to {
+    transform: translate3d(0, -115%, -200px);
+  }
+}
+
+#movies {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  z-index: 1;
+  color: white;
+}
+
+#movies li {
+  list-style-type: none;
+  padding-right: 20px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+}
+
+#movies li:hover {
+  color: cornflowerblue;
+  text-decoration: underline;
+}
