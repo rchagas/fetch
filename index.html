@@ -1,22 +1,21 @@
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Cefet-MG TCC</title>
-	<link href="style.css" rel="stylesheet">
-</head>
-<body>
-    <div id=navbar>
-        <a class=active data-section="fetch">Fetch</a></li>
-        <a data-section="push">Push</a>
+    <head>
+        <meta charset="utf-8">
+        <title>Cefet-MG TCC</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id=navbar>
+            <a class=active data-section="starwars">Demo Star Wars</a></li>
+        <a data-section="spotify">Demo Spotify</a>
     </div>
-	<div class="container active" id=fetch>
-        <h2 align=center> Demonstração Fetch </h2>
+    <div class="container active" id=starwars>
         <nav id="movies">
             <ul>
             </ul>
         </nav>
-            <div class="flow">
-                <pre class="reading-animation">
+        <div class="flow">
+            <pre class="reading-animation">
           Episode I
           THE PHANTOM MENACE
 
@@ -41,13 +40,26 @@
           stolen plans that can save her
           people and restore
           freedom to the galaxy....
-                </pre>
-            </div>
-	</div>
-	<div class=container id=push>
-        <h2 align=center> Demonstração Push </h2>
-	</div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
-	<script src="main.js"></script>
+            </pre>
+        </div>
+    </div>
+    <div class="container" id=spotify>
+        <img src="spotify.png" alt="Spotify" height="80">
+        <h1>Pesquise um artista</h1>
+        <p></p>
+        <div id="search-form">
+
+            <input type="text" id="query" value="" class="form-control" placeholder="Nome do Artista"/>
+            <input type="submit" id="search" class="btn btn-primary" value="Pesquisar" />
+        </div>
+        <div id="results"></div>
+    </div>
+    <script type="text/javascript" src="handlebars-v4.0.10.js"></script>
+    <script id="results-template" type="text/x-handlebars-template">
+        {{#each albums.items}}
+        <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+        {{/each}}
+    </script>
+    <script src="main.js"></script>
 </body>
 </html>
