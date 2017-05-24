@@ -19,9 +19,10 @@ body{
     font-size: 20px;
     text-decoration: none;
     padding: 15px 20px 16px 20px;
+    opacity: 0.5;
 }
 #navbar .active{
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .container{
